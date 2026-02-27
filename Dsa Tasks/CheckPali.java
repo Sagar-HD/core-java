@@ -17,9 +17,6 @@ class CheckPali{
 			int digit=copy%10;
 			rev=(rev*10)+digit;
 			copy/=10;
-			
-			
-			
 		}
 		return rev==n;
 		
