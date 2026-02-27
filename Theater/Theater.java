@@ -31,10 +31,16 @@ class Theater{
 	static int noOfUsers=0;
 	User loggedInUser=null;
  public void showMenu(){
+	 while(this.loggedInUser==null){
+	 Scanner scanner=new Scanner(System.in);
+	int choice;
 	
 	System.out.println("press 1 to Login as Admin");
 	System.out.println("press 2 to Login as Customer");
     System.out.println("press 3 to Register as Customer");
+	choice=scanner.nextInt();
+	scanner.nextLine();
+	 }
 }
 	public void registerCustomer(){
 		Scanner scanner=new Scanner(System.in);
@@ -58,7 +64,7 @@ class Theater{
 			System.out.println("Invalid username or password not found");
 			return;
 		}
-		if(true){
+		if(loginCustomer.validateLogin(userName,password)==true){
 		loggedInUser=loginCustomer;
 		System.out.println("Customer logged in sucessfully");
 		}
@@ -68,18 +74,15 @@ class Theater{
 		}
 		
 	}
-	/*public void loginAdmin(){
+	public void loginAdmin(){
 	Scanner scanner=new Scanner(System.in);
 		System.out.println("enter a user name");
 		String userName=scanner.nextLine();
 		System.out.println("enter a password");
 		String password=scanner.nextLine();
 		
-		if(userName!=this.admin.userName){
-			System.out.println("user not found");
-			return;
-		}
-		if(password!=this.admin.password){
+		
+		if(this.admin.validateLogin(userName,password)!=true){
 			System.out.println("Invalid username or password");
 			return;
 			
@@ -90,6 +93,6 @@ class Theater{
 		System.out.println("Admin logged in sucessfully");
 		}
 		
-	}*/
+	}
 	
 }
