@@ -1,45 +1,47 @@
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.Map;
 class Theater{
 	
-	class Admin extends User{
-	@Override
-	public void showMenu(){
-		
-		System.out.println("will be implemented later");
-		
-		
-		
-	}
 	
-	
-	private Admin(int userId,String name,String password){
-		super(userId,name,password);
-		System.out.println("admin created");
-	
-	}
-	
-	
-	
-	
-	
-	
-}
 	private final Admin admin=new Admin(1,"sagar","sagarhd");
 	private HashMap<String,Customer> customers=new HashMap<>();
 	private HashMap<String,Show> shows=new HashMap<>();
 	static int noOfUsers=0;
 	User loggedInUser=null;
  public void showMenu(){
+	 boolean run=true;
+	 while(run){
 	 while(this.loggedInUser==null){
+		 
 	 Scanner scanner=new Scanner(System.in);
 	int choice;
 	
 	System.out.println("press 1 to Login as Admin");
 	System.out.println("press 2 to Login as Customer");
     System.out.println("press 3 to Register as Customer");
+	 System.out.println("press 4 to exit");
+	 
 	choice=scanner.nextInt();
-	scanner.nextLine();
+		scanner.nextLine();
+	switch(choice){
+		case 1:
+		loginAdmin();
+		break;
+		case 2:
+		loginCustomer();
+		break;
+		case 3:
+		registerCustomer();
+		break;
+		case 4:
+		return;
+		default:
+		System.out.println("invalid input");
+	}
+
+	 }
+	 loggedInUser.showMenu(this);
 	 }
 }
 	public void registerCustomer(){
@@ -94,5 +96,81 @@ class Theater{
 		}
 		
 	}
-	
+	public void logout(){
+		this.loggedInUser=null;
+		
+	}
+	public void createShow(){
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("enter show name");
+		String showName=scanner.nextLine();
+		System.out.println("enter total seats");
+		int totalSeats=scanner.nextInt();
+		scanner.nextLine();
+		Show showToAdd=new Show(showName,totalSeats);
+		shows.put(showName,showToAdd);
+		System.out.println("Show created successfully");
+		
+	}
+	public void displayShows(){
+		 if(shows.isEmpty()){
+        System.out.println("No shows available");
+        return;
+    }
+
+    for(Map.Entry<String, Show> entry : shows.entrySet()) {
+
+        String showName = entry.getKey();
+        
+
+        System.out.println("Show name: " + showName);
+       
+        System.out.println("----------------------");
+    }
+	}
+	public void bookSeat(){
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("enter show name to book");
+		String showName=scanner.nextLine();
+		Show showToBook=shows.get(showName);
+		if(showToBook==null){
+			System.out.println("Show not available");
+			return;
+		}
+		if(showToBook.getAvailableSeats()<=0){
+			System.out.println("Seats not available");
+			return;
+			
+			
+		}
+		System.out.println("Show name : "+showName);
+		System.out.println("Available Seats : "+showToBook.getAvailableSeats());
+		int startSeat=showToBook.getTotalSeats()-showToBook.getAvailableSeats()+1;
+		System.out.println(" Seats No: "+startSeat+" to "+" Seats No: "+showToBook.getTotalSeats());
+	    System.out.println("enter seat no to book");
+		int seatNoToBook=scanner.nextInt();
+		scanner.nextLine();
+		showToBook.book(seatNoToBook);
+		
+
+	}
+	public void cancelSeat(){
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("enter show name to cancel");
+		String showName=scanner.nextLine();
+		Show showToCancel=shows.get(showName);
+		if(showToCancel==null){
+			System.out.println("Show not available");
+			return;
+		}
+		
+		System.out.println("Show name : "+showName);
+		
+	    System.out.println("enter seat no to cancel");
+		int seatNoToCancel=scanner.nextInt();
+		scanner.nextLine();
+		showToCancel.cancel(seatNoToCancel);
+		
+
+	}
 }

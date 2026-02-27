@@ -16,7 +16,7 @@ abstract class User{
         return isAuthenticate;
 	}
 	
-	public abstract void showMenu();
+	public abstract void showMenu(Theater theater);
 	
 	
 	

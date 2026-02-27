@@ -1,4 +1,4 @@
-class Seat implements Bookable{
+class Seat{
 	
 	private boolean isAvailable;
 	int seatNumber;
@@ -9,17 +9,13 @@ class Seat implements Bookable{
 		this.seatNumber=seatNumber;
 		this.price=price;
 	}
-@Override
-public void book(int showId,int seatNumber){
-	System.out.println("Booking logic will be implemented here");
-}
-@Override
-public void cancel(int showId,int seatNumber){
-		System.out.println("Cancel logic will be implemented here");
-	
-}
-	
-	
+   public void setAvailability(boolean value){
+	   this.isAvailable=value;
+   }
+  public boolean getAvailability(){
+	  return this.isAvailable;
+   }
+
 	
 	
 }
