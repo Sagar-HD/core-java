@@ -18,10 +18,20 @@ class Customer extends User{
 			theater.displayShows();
 			break;
 			case 2:
+			try{
 			theater.bookSeat();
+			}
+			catch(seatNotAvailableException e){
+			System.out.println(e);	
+			}
 			break;
 			case 3:
+			try{
 			theater.cancelSeat();
+			}
+			catch(showNotFoundException e){
+				 System.out.println(e);	
+			}
 			break;
 			case 4:
 			theater.logout();

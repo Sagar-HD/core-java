@@ -128,18 +128,16 @@ class Theater{
         System.out.println("----------------------");
     }
 	}
-	public void bookSeat(){
+	public void bookSeat() throws seatNotAvailableException{
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("enter show name to book");
 		String showName=scanner.nextLine();
 		Show showToBook=shows.get(showName);
 		if(showToBook==null){
-			System.out.println("Show not available");
-			return;
+			throw new seatNotAvailableException("seat not available");
 		}
 		if(showToBook.getAvailableSeats()<=0){
-			System.out.println("Seats not available");
-			return;
+			throw new seatNotAvailableException("seat not available");
 			
 			
 		}
@@ -154,14 +152,14 @@ class Theater{
 		
 
 	}
-	public void cancelSeat(){
+	public void cancelSeat() throws showNotFoundException {
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("enter show name to cancel");
 		String showName=scanner.nextLine();
 		Show showToCancel=shows.get(showName);
 		if(showToCancel==null){
-			System.out.println("Show not available");
-			return;
+			throw new showNotFoundException("Show not found");
+			
 		}
 		
 		System.out.println("Show name : "+showName);
