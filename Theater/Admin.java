@@ -19,8 +19,10 @@ class Admin extends User{
 			break;
 			case 2:
 			theater.createShow();
+			break;
 			case 3:
 			theater.logout();
+			break;
 			
 		}
 		}

@@ -1,8 +1,8 @@
 class Seat{
 	
 	private boolean isAvailable;
-	int seatNumber;
-	int price;
+	private int seatNumber;
+	private int price;
 	
 	Seat(int seatNumber,int price){
 		this.isAvailable=true;

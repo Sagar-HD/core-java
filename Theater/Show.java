@@ -52,5 +52,9 @@ public void cancel(int seatNo){
 		 System.out.println("Seat is not booked to cancel");
 	}
 }
+public HashMap<Integer,Seat> getSeats(){
+	
+	return this.seats;
+}
 	
 }

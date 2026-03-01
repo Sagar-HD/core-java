@@ -128,13 +128,13 @@ class Theater{
         System.out.println("----------------------");
     }
 	}
-	public void bookSeat() throws seatNotAvailableException{
+	public void bookSeat() throws seatNotAvailableException,showNotFoundException{
 		Scanner scanner=new Scanner(System.in);
 		System.out.println("enter show name to book");
 		String showName=scanner.nextLine();
 		Show showToBook=shows.get(showName);
 		if(showToBook==null){
-			throw new seatNotAvailableException("seat not available");
+			throw new showNotFoundException("seat not available");
 		}
 		if(showToBook.getAvailableSeats()<=0){
 			throw new seatNotAvailableException("seat not available");
@@ -143,8 +143,30 @@ class Theater{
 		}
 		System.out.println("Show name : "+showName);
 		System.out.println("Available Seats : "+showToBook.getAvailableSeats());
-		int startSeat=showToBook.getTotalSeats()-showToBook.getAvailableSeats()+1;
-		System.out.println(" Seats No: "+startSeat+" to "+" Seats No: "+showToBook.getTotalSeats());
+		
+    boolean found = false;
+
+    System.out.println("Available Seats:");
+
+	HashMap<Integer,Seat> seats= showToBook.getSeats();
+	//logic to displayavailable seats
+    for(Map.Entry<Integer, Seat> entry : seats.entrySet()){
+
+        Seat seat = entry.getValue();
+
+        if(seat.getAvailability()){
+            System.out.print(entry.getKey() + " ");
+            found = true;
+        }
+    }
+
+    if(!found){
+        System.out.println("No seats available");
+    }
+    else{
+        System.out.println();
+    }
+	//seat display logic
 	    System.out.println("enter seat no to book");
 		int seatNoToBook=scanner.nextInt();
 		scanner.nextLine();
