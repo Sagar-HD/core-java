@@ -42,7 +42,10 @@ class RideFareCalculator{
 			return fareAfterTime;
 		}
 		waitingMinutes-=2;
-		double res=fareAfterTime+waitingMinutes*0.50;
+		double res=fareAfterTime;
+		for(int i=1;i<waitingMinutes;i++){
+			res+=0.50;
+		}
 				System.out.println("fare after waiting charge : "+res);
 		return res;
 		
