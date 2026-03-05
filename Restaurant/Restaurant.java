@@ -1,11 +1,18 @@
+import java.util.List;
+import java.util.ArrayList;
 class Restaurant{
 	
-	private List<MenuItem> menu=new ArrayList<>;
+	private List<MenuItem> menu=new ArrayList<>();
 	private String restaurantName;
 	
 	
 	Restaurant(String name){
-		this.name=name;
+		this.restaurantName=name;
+	}
+	public List<MenuItem> getMenuItems(){
+		return this.menu;
+		
+		
 	}
 	void addItemToMenu(MenuItem menuItem){
 		
@@ -21,7 +28,10 @@ class Restaurant{
 		
 		
 	}
-	
+	String getName(){
+		return this.restaurantName;
+		
+	}
 	
 	
 }
