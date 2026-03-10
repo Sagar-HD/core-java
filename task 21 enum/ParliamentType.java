@@ -1,0 +1,3 @@
+public enum ParliamentType {
+    LOKSABHA, RAJYASABHA, JOINT_SESSION, SPECIAL_SESSION
+}
