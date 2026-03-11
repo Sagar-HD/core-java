@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.List;
 class Ui{
 	
-	public static void main(String... args){
+	public static void main(String... args) throws RestaurantNotFoundException{
 		Scanner sc=new Scanner(System.in);
 		RestaurantServices rs=new RestaurantServices();
 		User loggedInUser=null;
@@ -77,7 +77,7 @@ class Ui{
 		resToAddMenu.addItemToMenu(menuItem);
 		}
 		else{
-			System.out.println("restaurant not found");
+			throw new RestaurantNotFoundException("res not found");
 		}
 		// display menu of res
 		List<MenuItem> menu=resToAddMenu.getMenuItems();
