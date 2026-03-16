@@ -1,14 +1,14 @@
-class PetroleumCompany{
+class Pasta{
 
-    String[] petroleum=new String[10];
+    String[] pastas=new String[10];
     int curIndex=0;
 
     void save(String name){
-        if(this.petroleum!=null){
-            int index=this.petroleum.length-1;
+        if(this.pastas!=null){
+            int index=this.pastas.length-1;
 
             if(this.curIndex<=index){
-                petroleum[this.curIndex]=name;
+                pastas[this.curIndex]=name;
                 this.curIndex++;
             }
         }
@@ -16,9 +16,9 @@ class PetroleumCompany{
 
     boolean search(String name){
         if(name!=null){
-            if(this.petroleum!=null){
-                for(String p:petroleum){
-                    if(name==p){
+            if(this.pastas!=null){
+                for(String pasta:pastas){
+                    if(name==pasta){
                         return true;
                     }
                 }

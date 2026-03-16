@@ -24,4 +24,35 @@ class Singer{
             System.out.println("Singer array cannot be null");
         }
     }
+	boolean search(String name){
+		if(name!=null){
+			if(this.singers!=null){
+				for(String singer : singers){
+					 System.out.println("matching with "+singer);
+					if(name==singer){
+						 System.out.println("user matched");
+						 return true;
+				
+					}
+					
+					
+				}
+				
+			}
+			else{
+				 System.out.println("array is null");	
+				
+				
+			}
+			
+		}
+		else{
+			
+		 System.out.println("name is null");	
+		}
+		System.out.println("user not found");
+		return false;
+		
+		
+	}
 }
