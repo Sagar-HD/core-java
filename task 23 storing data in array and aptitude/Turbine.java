@@ -26,4 +26,41 @@ class Turbine{
         }
         return false;
     }
+	void delete(int index){
+    if(this.turbines==null){
+        System.out.println("Turbine list is null");
+        return;
+    }
+    if(index<0 || index>=this.turbines.length){
+        System.out.println("Invalid index: "+index);
+        return;
+    }
+    if(turbines[index]==null){
+        System.out.println("Already empty at index "+index);
+        return;
+    }
+    System.out.println("Deleting at index "+index+" value: "+turbines[index]);
+    turbines[index]=null;
+    System.out.println("Deleted successfully");
+}
+
+void delete(String name){
+    if(name==null){
+        System.out.println("Name is null");
+        return;
+    }
+    if(this.turbines==null){
+        System.out.println("Turbine list is null");
+        return;
+    }
+    for(int i=0;i<this.turbines.length;i++){
+        if(name.equals(turbines[i])){
+            System.out.println("Found "+name+" at index "+i+" deleting");
+            turbines[i]=null;
+            System.out.println("Deleted successfully");
+            return;
+        }
+    }
+    System.out.println(name+" not found");
+}
 }

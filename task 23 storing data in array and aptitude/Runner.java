@@ -14,10 +14,10 @@ class Runner{
         pasta.save("Tortellini");
         pasta.save("Lasagna");
 
-        System.out.println("Pasta search "+pasta.search("Macaroni"));
-        System.out.println("Pasta search "+pasta.search("Penne"));
-        System.out.println("Pasta search "+pasta.search("Lasagna"));
-        System.out.println("Pasta search "+pasta.search("Fusilli"));
+        pasta.delete("Macaroni");
+        pasta.delete("Penne");
+        pasta.delete(9);
+        pasta.delete(3);
 
 
         PetroleumCompany petroleumCompany=new PetroleumCompany();
@@ -32,10 +32,10 @@ class Runner{
         petroleumCompany.save("Gulf");
         petroleumCompany.save("ONGC");
 
-        System.out.println("Petroleum search "+petroleumCompany.search("Shell"));
-        System.out.println("Petroleum search "+petroleumCompany.search("HP"));
-        System.out.println("Petroleum search "+petroleumCompany.search("Reliance"));
-        System.out.println("Petroleum search "+petroleumCompany.search("Total"));
+        petroleumCompany.delete("Shell");
+        petroleumCompany.delete("HP");
+        petroleumCompany.delete(5);
+        petroleumCompany.delete(7);
 
 
         Singer singer=new Singer();
@@ -50,10 +50,10 @@ class Runner{
         singer.save("Sunidhi Chauhan");
         singer.save("Mohit Chauhan");
 
-        System.out.println("Singer search "+singer.search("KK"));
-        System.out.println("Singer search "+singer.search("Arijit Singh"));
-        System.out.println("Singer search "+singer.search("Sonu Nigam"));
-        System.out.println("Singer search "+singer.search("Neha Kakkar"));
+        singer.delete("KK");
+        singer.delete("Arijit Singh");
+        singer.delete(2);
+        singer.delete(6);
 
 
         Tree tree=new Tree();
@@ -68,10 +68,10 @@ class Runner{
         tree.save("Oak");
         tree.save("Maple");
 
-        System.out.println("Tree search "+tree.search("Neem"));
-        System.out.println("Tree search "+tree.search("Mango"));
-        System.out.println("Tree search "+tree.search("Oak"));
-        System.out.println("Tree search "+tree.search("Pine"));
+        tree.delete("Neem");
+        tree.delete("Mango");
+        tree.delete(8);
+        tree.delete(7);
 
 
         Steel steel=new Steel();
@@ -86,10 +86,10 @@ class Runner{
         steel.save("Kalyani Steel");
         steel.save("AMNS Steel");
 
-        System.out.println("Steel search "+steel.search("SAIL"));
-        System.out.println("Steel search "+steel.search("JSW Steel"));
-        System.out.println("Steel search "+steel.search("Tata Steel"));
-        System.out.println("Steel search "+steel.search("RINL"));
+        steel.delete("SAIL");
+        steel.delete("JSW Steel");
+        steel.delete(0);
+        steel.delete(6);
 
 
         Kettle kettle=new Kettle();
@@ -104,10 +104,10 @@ class Runner{
         kettle.save("Orpat");
         kettle.save("Milton");
 
-        System.out.println("Kettle search "+kettle.search("Prestige"));
-        System.out.println("Kettle search "+kettle.search("Philips"));
-        System.out.println("Kettle search "+kettle.search("Bajaj"));
-        System.out.println("Kettle search "+kettle.search("Milton"));
+        kettle.delete("Prestige");
+        kettle.delete("Philips");
+        kettle.delete(4);
+        kettle.delete(9);
 
 
         Turbine turbine=new Turbine();
@@ -122,10 +122,10 @@ class Runner{
         turbine.save("Francis Turbine");
         turbine.save("Micro Turbine");
 
-        System.out.println("Turbine search "+turbine.search("Wind Turbine"));
-        System.out.println("Turbine search "+turbine.search("Gas Turbine"));
-        System.out.println("Turbine search "+turbine.search("Steam Turbine"));
-        System.out.println("Turbine search "+turbine.search("Pelton Turbine"));
+        turbine.delete("Wind Turbine");
+        turbine.delete("Gas Turbine");
+        turbine.delete(1);
+        turbine.delete(6);
 
 
         Scooter scooter=new Scooter();
@@ -140,10 +140,10 @@ class Runner{
         scooter.save("Aerox");
         scooter.save("Burgman");
 
-        System.out.println("Scooter search "+scooter.search("Activa"));
-        System.out.println("Scooter search "+scooter.search("Jupiter"));
-        System.out.println("Scooter search "+scooter.search("Access"));
-        System.out.println("Scooter search "+scooter.search("Burgman"));
+        scooter.delete("Activa");
+        scooter.delete("Jupiter");
+        scooter.delete(2);
+        scooter.delete(9);
 
     }
 }
