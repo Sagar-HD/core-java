@@ -1,0 +1,6 @@
+enum Seller{
+	
+	AMAZON,FLIPKART,NUTRABAY,MUSCLEBLAZE
+	
+	
+}
