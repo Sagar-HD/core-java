@@ -9,6 +9,7 @@ public class City {
     public City(String name, int noOfDistricts, District[] districts) {
         this.name = name;
         this.noOfDistricts = noOfDistricts;
+        this.districts = districts;
     }
 
     @Override
