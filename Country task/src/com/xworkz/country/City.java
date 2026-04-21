@@ -1,5 +1,7 @@
 package com.xworkz.country;
 
+import java.util.Arrays;
+
 public class City {
     String name;
     int noOfDistricts;
@@ -7,5 +9,14 @@ public class City {
     public City(String name, int noOfDistricts, District[] districts) {
         this.name = name;
         this.noOfDistricts = noOfDistricts;
+    }
+
+    @Override
+    public String toString() {
+        return "City{" +
+                "districts=" + Arrays.toString(districts) +
+                ", name='" + name + '\'' +
+                ", noOfDistricts=" + noOfDistricts +
+                '}';
     }
 }
