@@ -85,6 +85,49 @@ public class CountryStore {
         return null;
 
     }
+    City[] findAllCityByStateName(String name){
+        if(this.countries!=null) {
+            if(name!=null){
+                State state=findStateByStateName(name);
+                if(state!=null){
+                    return state.cities;
+                }
+            }
+            else {
+                System.out.println("state name is null");
+            }
+        }
+        else{
+            System.out.println("Array is empty");
+        }
+        System.out.println("state not found");
+        return null;
+    }
+    int findNoOfDistrictsByCityName(String name){
+        if(this.countries!=null) {
+            if(name!=null){
+                for(Country country:this.countries){
+                    if(country!=null){
+                        for(State state:country.states){
+                            if(state!=null){
+                                for(City city:state.cities){
+                                    if(name.equals(city.name)){
+                                        return city.noOfDistricts;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        else{
+            System.out.println("Array is empty");
+        }
+        System.out.println("City not found");
+        return -1;
+
+    }
 
 
 
