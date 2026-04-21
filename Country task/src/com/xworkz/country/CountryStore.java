@@ -61,13 +61,15 @@ public class CountryStore {
 
     State findStateByStateName(String name){
         if(this.countries!=null) {
-            if(name!=null){
-                for(Country country:this.countries){
-                    if(country!=null){
-                        for(State state:country.states){
-                            if(state!=null){
-                                if(name.equals(state.name)){
-                                    return state;
+            if(name!=null) {
+                for (Country country : this.countries) {
+                    if (country != null) {
+                        if (country.states != null) {
+                            for (State state : country.states) {
+                                if (state != null) {
+                                    if (name.equals(state.name)) {
+                                        return state;
+                                    }
                                 }
                             }
                         }
@@ -105,14 +107,19 @@ public class CountryStore {
     }
     int findNoOfDistrictsByCityName(String name){
         if(this.countries!=null) {
-            if(name!=null){
-                for(Country country:this.countries){
-                    if(country!=null){
-                        for(State state:country.states){
-                            if(state!=null){
-                                for(City city:state.cities){
-                                    if(name.equals(city.name)){
-                                        return city.noOfDistricts;
+            if (name != null) {
+
+                for (Country country : this.countries) {
+                    if (country != null) {
+                        if (country.states != null) {
+                            for (State state : country.states) {
+                                if (state != null) {
+                                    if (state.cities != null) {
+                                        for (City city : state.cities) {
+                                            if (name.equals(city.name)) {
+                                                return city.noOfDistricts;
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -129,6 +136,47 @@ public class CountryStore {
 
     }
 
+    Country findByCollectorName(String collectorName){
+        if(this.countries!=null) {
+            if(collectorName!=null) {
+                for (Country country : this.countries) {
+                    if (country != null) {
+                        if (country.states != null) {
+                            for (State state : country.states) {
+                                if (state != null) {
+                                    if (state.cities != null) {
+                                        for (City city : state.cities) {
+                                            if (city != null) {
+                                                if (city.districts != null) {
+                                                    for (District district : city.districts) {
+                                                        if (district != null) {
+                                                            if (district.collector != null) {
 
+                                                                if (collectorName.equals(district.collector.name)) {
+                                                                    return country;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else{
+                System.out.println("Collector name is null");
+            }
+        }
+        else{
+            System.out.println("Array is empty");
+        }
+        System.out.println("collector not found");
+        return null;
+    }
 
 }
