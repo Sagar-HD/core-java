@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7c2864e-31b7-41fd-b73f-cacc27facf6e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xworkz/designPatterns/dtoDesignPattern/dto/ArtistDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xworkz/designPatterns/dtoDesignPattern/dto/HotelDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xworkz/designPatterns/dtoDesignPattern/dto/LaptopDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xworkz/designPatterns/dtoDesignPattern/dto/MovieDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xworkz/designPatterns/dtoDesignPattern/dto/PassportDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xworkz/designPatterns/dtoDesignPattern/dto/ResumeDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/xworkz/designPatterns/dtoDesignPattern/test/Test.java" afterDir="false" />
-    </list>
+    <list default="true" id="f7c2864e-31b7-41fd-b73f-cacc27facf6e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
