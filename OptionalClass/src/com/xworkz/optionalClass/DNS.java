@@ -12,6 +12,7 @@ public DNS(){
     this.server[3]=new DomainIpDto("xworkz.com","127.0.0.0");
 
 }
+//not recommoned to use optional in parameter and instance variable
 public Optional<String> getIpbyDomainName(Optional<String> domain){
     if(domain.isPresent()){
         if(this.server!=null){
