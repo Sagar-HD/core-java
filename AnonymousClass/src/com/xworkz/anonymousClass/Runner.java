@@ -11,5 +11,12 @@ public class Runner {
             }
         };
         browser1.switchTab();
+        Jump jump=new Jump() {
+            @Override
+            public void jumpHigh() {
+                System.out.println("jumping from anonymous class");
+            }
+        };
+        jump.jumpHigh();
     }
 }
