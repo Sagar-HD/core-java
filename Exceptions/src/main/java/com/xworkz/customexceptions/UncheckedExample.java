@@ -4,6 +4,8 @@ package com.xworkz.customexceptions;
 import com.xworkz.customexceptions.exceptions.unchecked.MyAnotherUncheckedException;
 import com.xworkz.customexceptions.exceptions.unchecked.MyUncheckedException;
 
+import java.util.Collection;
+
 public class UncheckedExample {
     static  void createUncheckedEvent(boolean data){
         if(data){
