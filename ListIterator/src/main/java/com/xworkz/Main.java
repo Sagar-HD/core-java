@@ -102,12 +102,12 @@ public class Main {
         }
         System.out.println(list);
 
-        //while iterating if its odd add 50 to its  next position
+        //while iterating if its odd add 50
         itr= list.listIterator(list.size());
         while(itr.hasPrevious()){
             Integer num=itr.previous();
             if(num%2!=0){
-                itr.next();
+
                 itr.add(50);
 
 
