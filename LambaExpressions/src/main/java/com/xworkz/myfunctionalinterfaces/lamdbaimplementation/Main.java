@@ -6,6 +6,9 @@ import com.xworkz.myfunctionalinterfaces.primitiveandvoid.GetHalf;
 import com.xworkz.myfunctionalinterfaces.primitiveandvoid.IsEven;
 import com.xworkz.myfunctionalinterfaces.primitiveandvoid.Sum;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.function.Predicate;
 
 public class Main {
@@ -73,6 +76,7 @@ public class Main {
         };
         Predicate<God> isGodTrueBasedOnField=getGodChecker.get("name");
         System.out.println(" is god true based on name "+isGodTrueBasedOnField.test(newGod));
+
 
 
         }
