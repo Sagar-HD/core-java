@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="ded591f1-9416-47d0-b2d9-bd72056d80dd" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/set/Set.java" afterDir="false" />
