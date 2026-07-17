@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ded591f1-9416-47d0-b2d9-bd72056d80dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/set/Set.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/set/Set2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/set/dto/SnackDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Collections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Collections/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Set.executor": "Run",
+    "Application.Set2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
