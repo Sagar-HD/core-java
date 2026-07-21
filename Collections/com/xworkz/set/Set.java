@@ -1,4 +1,4 @@
-package src.com.xworkz.set;
+package com.xworkz.set;
 
 import java.util.*;
 

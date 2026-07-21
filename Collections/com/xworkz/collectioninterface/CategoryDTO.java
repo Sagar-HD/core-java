@@ -1,4 +1,4 @@
-package src.com.xworkz.collectioninterface;
+package com.xworkz.collectioninterface;
 
 public class CategoryDTO {
     private int categoryId;

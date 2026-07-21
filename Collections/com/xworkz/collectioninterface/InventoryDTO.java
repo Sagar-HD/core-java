@@ -1,4 +1,4 @@
-package src.com.xworkz.collectioninterface;
+package com.xworkz.collectioninterface;
 
 public class InventoryDTO {
     private int itemId;

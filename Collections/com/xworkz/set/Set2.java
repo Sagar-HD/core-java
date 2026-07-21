@@ -1,6 +1,6 @@
-package src.com.xworkz.set;
+package com.xworkz.set;
 
-import src.com.xworkz.set.dto.SnackDTO;
+import com.xworkz.set.dto.SnackDTO;
 
 import java.util.*;
 import java.util.Set;
