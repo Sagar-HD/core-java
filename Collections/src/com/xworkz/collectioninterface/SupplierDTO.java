@@ -1,4 +1,4 @@
-package CollectionInterface;
+package src.com.xworkz.collectioninterface;
 
 public class SupplierDTO {
     private int supplierId;

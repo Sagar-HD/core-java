@@ -1,4 +1,4 @@
-package CollectionInterface;
+package src.com.xworkz.collectioninterface;
 
 import java.time.LocalDate;
 

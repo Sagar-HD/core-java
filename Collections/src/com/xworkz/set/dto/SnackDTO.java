@@ -1,4 +1,4 @@
-package set.dto;
+package src.com.xworkz.set.dto;
 
 import java.io.Serializable;
 import java.util.Objects;

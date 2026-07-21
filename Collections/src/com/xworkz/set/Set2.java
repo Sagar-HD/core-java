@@ -1,8 +1,7 @@
-package set;
+package src.com.xworkz.set;
 
-import set.dto.SnackDTO;
+import src.com.xworkz.set.dto.SnackDTO;
 
-import java.io.Serializable;
 import java.util.*;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -33,7 +32,7 @@ public class Set2 {
         snacksset.clear();
         System.out.println(snacksset.size());
         if(snacksset.isEmpty()){
-            System.out.println("set is empty");
+            System.out.println("src.CollectionInterface.set is empty");
         }
        snacksset.add(new SnackDTO("sweet","chocolate",10.0,100.0));
        snacksset.add(new SnackDTO("salty","chips",20.0,50.0));
@@ -121,7 +120,7 @@ public class Set2 {
 
 
 
-        
+
     }
 
 
