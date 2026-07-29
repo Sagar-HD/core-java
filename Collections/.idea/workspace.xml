@@ -4,25 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ded591f1-9416-47d0-b2d9-bd72056d80dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/com/xworkz/map/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/CategoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/CategoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/CollectionRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/CollectionRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/ColletionsHirerachy.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/ColletionsHirerachy.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/DiscountDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/DiscountDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/EmployeeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/EmployeeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/InventoryDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/InventoryDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/InvoiceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/InvoiceDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/OrderDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/OrderDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/ReviewDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/ReviewDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/ShipmentDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/ShipmentDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/SupplierDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/SupplierDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/collectioninterface/collections_hirearchy.webp" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/collectioninterface/collections_hirearchy.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/set/Set.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/set/Set.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/set/Set2.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/set/Set2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xworkz/set/dto/SnackDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/com/xworkz/set/dto/SnackDTO.java" afterDir="false" />
-    </list>
+    <list default="true" id="ded591f1-9416-47d0-b2d9-bd72056d80dd" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
