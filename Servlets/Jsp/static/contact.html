@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex space-x-8">
+                    <a href="contact.html" class="hover:text-blue-200 transition-colors duration-200">Contact</a>
+                    <a href="register.html" class="hover:text-blue-200 transition-colors duration-200">Register</a>
+                    <a href="proverb.html" class="hover:text-blue-200 transition-colors duration-200">Proverb</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-md mx-auto mt-10 bg-white p-8 rounded-lg shadow-md">
+        <h1 class="text-2xl font-bold mb-6 text-center text-gray-800">Contact Us</h1>
+        <form method="post" action="save">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-2">Name</label>
+                <input name="feild1" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-2">Email</label>
+                <input name="feild2" type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-medium mb-2">Subject</label>
+                <input name="feild3" type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter subject">
+            </div>
+            <div class="mb-6">
+                <label class="block text-gray-700 font-medium mb-2">Message</label>
+                <textarea name="feild4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <input type="hidden" name="optionUsed" value="contact"/>
+            <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
