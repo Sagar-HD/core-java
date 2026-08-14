@@ -1,6 +1,6 @@
-package dto;
+package com.xworkz.dto;
 
-public class User {
+public class UserDto {
     private int id;
     private String name;
     private String email;
@@ -38,10 +38,15 @@ public class User {
         this.password = password;
     }
 
-    public User(String email, int id, String name, String password) {
+    public UserDto(String email, int id, String name, String password) {
         this.email = email;
         this.id = id;
         this.name = name;
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDto{"+this.getName()+","+this.getEmail()+"}";
     }
 }

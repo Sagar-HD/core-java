@@ -99,7 +99,7 @@
     
     
     
-    <!-- Editable user database that can also be used by
+    <!-- Editable userDto database that can also be used by
          UserDatabaseRealm to authenticate users
     -->
                         
@@ -304,7 +304,7 @@
       
       
       
-      <!-- Use the LockOutRealm to prevent attempts to guess user passwords
+      <!-- Use the LockOutRealm to prevent attempts to guess userDto passwords
            via a brute-force attack -->
                                     
       

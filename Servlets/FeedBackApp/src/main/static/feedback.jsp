@@ -25,5 +25,11 @@
 
 </form>
 
+  <p>${user.name}</p>
+  <p>${user.email}</p>
+
+  <p>${feedback.mobile}</p>
+  <p>${feedback.comment}</p>
+
 </body>
 </html>

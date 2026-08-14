@@ -1,6 +1,7 @@
 package com.xworkz.controller;
 
-import dto.User;
+import com.xworkz.dto.FeedBackDto;
+import com.xworkz.dto.UserDto;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -23,12 +24,17 @@ public class FeedbackServlet extends HttpServlet {
             return;
         }
 
-        User user=(User)session.getAttribute("user");
+        UserDto userDto =(UserDto)session.getAttribute("user");
         String mobile=req.getParameter("mobile");
         String comment=req.getParameter("comment");
-        System.out.println(user.getName()+" feedback : "+comment);
+        FeedBackDto feedBackDto=new FeedBackDto(comment,Long.parseLong(mobile));
+        System.out.println(userDto +" feedback : " +feedBackDto);
 
-        resp.getWriter().write("feedback saved for user "+user.getName());
+        req.setAttribute("user",userDto);
+        req.setAttribute("feedback",feedBackDto);
+
+        req.getRequestDispatcher("feedback.jsp").forward(req,resp);
+
 
 
     }
