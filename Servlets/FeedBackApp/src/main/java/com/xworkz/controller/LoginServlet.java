@@ -1,6 +1,9 @@
 package com.xworkz.controller;
 
+import com.xworkz.dao.UserDao;
 import com.xworkz.dto.UserDto;
+import com.xworkz.dto.UserLoginDto;
+import com.xworkz.service.SignInService;
 
 import javax.servlet.ServletContext;
 import javax.servlet.annotation.WebServlet;
@@ -16,13 +19,22 @@ public class LoginServlet extends HttpServlet {
         String name=req.getParameter("name");
         String password=req.getParameter("password");
         ServletContext context= req.getServletContext();
-          UserDto userDto = (UserDto)context.getAttribute(name);
-          if(userDto ==null || !userDto.getPassword().equals(password)){
-              res.getWriter().println("username or password wrong");
-              return;
-          }
+
+          UserLoginDto userLoginDto= new UserLoginDto(password,name);
+
+
+        SignInService signInService=new SignInService(new UserDao());
+
+        if(!signInService.verifyLogin(userLoginDto)){
+            res.getWriter().println("username or password wrong");
+           return;
+        }
+
         HttpSession session=req.getSession();
-          session.setAttribute("user", userDto);
+
+
+         UserDto userDto=signInService.userByName(name);
+        session.setAttribute("user", userDto);
 
 
           res.getWriter().println("<html>" +

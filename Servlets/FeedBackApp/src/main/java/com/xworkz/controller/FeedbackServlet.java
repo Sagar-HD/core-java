@@ -1,7 +1,9 @@
 package com.xworkz.controller;
 
+import com.xworkz.dao.FeedBackDao;
 import com.xworkz.dto.FeedBackDto;
 import com.xworkz.dto.UserDto;
+import com.xworkz.service.FeedBackServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,8 +29,10 @@ public class FeedbackServlet extends HttpServlet {
         UserDto userDto =(UserDto)session.getAttribute("user");
         String mobile=req.getParameter("mobile");
         String comment=req.getParameter("comment");
-        FeedBackDto feedBackDto=new FeedBackDto(comment,Long.parseLong(mobile));
+        FeedBackDto feedBackDto=new FeedBackDto(comment,Long.parseLong(mobile),userDto.getId());
         System.out.println(userDto +" feedback : " +feedBackDto);
+        FeedBackServiceImpl feedBackService=new FeedBackServiceImpl(new FeedBackDao());
+        feedBackService.validateAndSave(feedBackDto);
 
         req.setAttribute("user",userDto);
         req.setAttribute("feedback",feedBackDto);

@@ -1,5 +1,6 @@
 package com.xworkz.controller;
 
+import com.xworkz.dao.UserDao;
 import com.xworkz.dto.UserDto;
 import com.xworkz.service.SignUpService;
 import com.xworkz.service.SignUpServiceImpl;
@@ -19,17 +20,10 @@ public class SignUpServlet extends HttpServlet {
         String name=req.getParameter("name");
         String password=req.getParameter("password");
         String confirmPassword=req.getParameter("confirmPassword");
-        SignUpService service=new SignUpServiceImpl();
+        SignUpService service=new SignUpServiceImpl(new UserDao());
 
 
-        if(userId==null||email==null||name==null||password==null||confirmPassword==null){
-            res.getWriter().println("all fields required");
-            return;
-        }
-//        if(!password.equals(confirmPassword)){
-//            res.getWriter().println("password dont match");
-//            return;
-//        }
+
 
         UserDto userDto =new UserDto(email,Integer.parseInt(userId),name,password);
         service.validateAndSave(userDto);

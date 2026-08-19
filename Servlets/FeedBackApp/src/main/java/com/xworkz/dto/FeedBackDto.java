@@ -1,6 +1,8 @@
 package com.xworkz.dto;
 
 public class FeedBackDto {
+    private int id;
+    private int userId;
     private long mobile;
     private String comment;
 
@@ -12,6 +14,14 @@ public class FeedBackDto {
         this.comment = comment;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public long getMobile() {
         return mobile;
     }
@@ -20,9 +30,18 @@ public class FeedBackDto {
         this.mobile = mobile;
     }
 
-    public FeedBackDto(String comment, long mobile) {
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public FeedBackDto(String comment, long mobile, int userId) {
         this.comment = comment;
         this.mobile = mobile;
+        this.userId=userId;
     }
 
     @Override
