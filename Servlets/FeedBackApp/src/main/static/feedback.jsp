@@ -22,6 +22,7 @@
     <br><br>
 
     <button type="submit">Submit Feedback</button>
+    <a href="profile">Profile</a>
 
 </form>
 

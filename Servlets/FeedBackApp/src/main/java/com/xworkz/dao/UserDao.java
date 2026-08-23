@@ -80,7 +80,7 @@ public class UserDao {
 
             ) {
                 if (rs.next()) {
-                    UserDto userDto=new UserDto(rs.getString("email"),rs.getInt("id"),rs.getString("email"),rs.getString("password"));
+                    UserDto userDto=new UserDto(rs.getString("email"),rs.getInt("id"),rs.getString("name"),rs.getString("password"));
                     return userDto;
 
                 } else {
