@@ -24,3 +24,44 @@ hs_err_pid*
 replay_pid*
 .classpath/
 .project/
+
+# =========================
+# IntelliJ IDEA
+# =========================
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# =========================
+# Maven
+# =========================
+target/
+
+# Maven Wrapper cache (optional)
+.mvn/wrapper/maven-wrapper.jar
+
+# =========================
+# Smart Tomcat
+# =========================
+.smarttomcat/
+smarttomcat/
+
+# =========================
+# Tomcat generated files
+# =========================
+work/
+logs/
+temp/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+*.log
