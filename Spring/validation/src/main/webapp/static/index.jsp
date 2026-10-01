@@ -40,7 +40,7 @@
     <div class="container">
         <h1>Spring Validation Demo</h1>
         <p>Welcome to the Spring Validation demonstration application.</p>
-        <a href="Form.jsp" class="form-link">Go to Validation Form</a>
+        <a href="form" class="form-link">Go to Validation Form</a>
     </div>
 </body>
 </html>
